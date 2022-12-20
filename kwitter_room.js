@@ -2,17 +2,20 @@
 //ADD YOUR FIREBASE LINKS HERE
 
 const firebaseConfig = {
-      apiKey: "AIzaSyC1OpT1rRfEqGdF5CxNzXvRMbRHf_CLKHI",
-      authDomain: "kwitter-2a8b9.firebaseapp.com",
-      databaseURL: "https://kwitter-2a8b9-default-rtdb.firebaseio.com",
-      projectId: "kwitter-2a8b9",
-      storageBucket: "kwitter-2a8b9.appspot.com",
-      messagingSenderId: "248820936280",
-      appId: "1:248820936280:web:217ad1678664f0b8d9a42d"
-    };
+  apiKey: "AIzaSyCPLvW-jwSplebLdcYwIY784LxP2ccKvc4",
+  authDomain: "lets-chat-3ca15.firebaseapp.com",
+  projectId: "lets-chat-3ca15",
+  storageBucket: "lets-chat-3ca15.appspot.com",
+  messagingSenderId: "261484146348",
+  appId: "1:261484146348:web:905e3396be226d713a3909",
+  measurementId: "G-EMSDLPFNWH"
+};
     
     // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
+
+   var user_name = localStorage.getItem("user_name");
+  document.getElementById("user_name").innerHTML - 'welcome' + user_name + "!"
    
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
        Room_names = childKey;
